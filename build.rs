@@ -8,6 +8,7 @@ fn compile_libunwind() {
     cfg.cpp_set_stdlib(None);
     cfg.cpp(true);
     cfg.flag("-std=c++11");
+    cfg.flag("-fno-stack-protector");
     cfg.flag("-fno-exceptions");
     cfg.flag("-fno-rtti");
     cfg.flag("-fstrict-aliasing");
