@@ -14,6 +14,7 @@ fn compile_libunwind() {
     cfg.flag("-fstrict-aliasing");
     cfg.flag("-fvisibility=hidden");
     cfg.flag("-funwind-tables");
+    cfg.flag("-mpreferred-stack-boundary=3");
     cfg.define("_LIBUNWIND_NO_HEAP", None);
     cfg.define("_LIBUNWIND_IS_BAREMETAL", None);
     cfg.define("_LIBUNWIND_IS_NATIVE_ONLY", None);
